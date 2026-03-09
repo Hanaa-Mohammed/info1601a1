@@ -3,11 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFO 1601 - Assignment 1</title>
+    <title>INFO 1601 - Assignment 1 - 816047677</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&display=swap" rel="stylesheet">
+
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            font-family: Roboto, sans-serif;
+            color:#000000;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        .card-body {
+            color: #555555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .card img {
+            display: block;
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333333;
+            padding: 15px 30px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        #main-container,
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin-left: 20px;
+            margin-right: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flex-item {
+            flex: auto;
+            min-width: 300px;
+        }
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            background-color: #222222;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .badge-success {
+            background-color: #28A745;
+            color: #ffffff;
+        }
+
+        .badge-danger {
+            background-color: #DC3545;
+            color: #ffffff;
+        }
+
+        figure {
+            width: 30vw;
+            margin: 0 auto;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        figcaption {
+            text-align: center;
+            color: #555555;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        details {
+            margin-bottom: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 16px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 12px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            text-align: left;
+            padding: 12px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button[popovertarget] {
+            cursor: pointer;
+        }
+
+        dialog[popover] {
+            border-radius: 12px;
+            padding: 24px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
+
 <body>
-   <h1>INFO 1601 - Assignment 1</h1>
+   <h1>INFO 1601 - Assignment 1 - 816047677</h1>
+
+   <nav>
+    <div style="font-weight: bold; color: #ffffff;">Purrfect Match</div>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Adopt</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+   </nav>
+
+   <section class="hero">
+    <div>
+        <h2 style="font-size: 36px; color: #333333; margin-bottom: 20px;">🐾Find Your Purrfect Match🐾</h2>
+        <p style="font-size: 18px; color: #555555; margin-bottom: 30px;">Ever wonder which feline truely fits your vibe? 
+            Take our fun, fast quiz and discover your ideal cat breed based on your lifestyle and preferences. 
+            Are you desitned for a magestic flluffy companion or a playful, energetic buddy? 
+            Find out now and meet your purrfect match!
+        </p>
+        <button class="btn-primary" popovertarget="adoptDialog">Take Quiz Now</button>
+    </div>
+   </section>
+
+    <dialog id="adoptDialog" popover>
+     <h3 style="font-size: 24px; color: #333333; margin-bottom: 20px;">Adoption Form</h3>
+     <p style="font-size: 16px; color: #555555; margin-bottom: 20px;">Answer a few questions to find your purrfect match!</p>
+     <form method="dialog">
+          <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required>
+          
+          <label for="activity">How active are you?</label>
+          <input type="range" id="activity" name="activity" min="1" max="10">
+    
+          <label for="space">How much space do you have?</label>
+          <input type="range" id="space" name="space" min="1" max="10">
+    
+          <label for="allergies">Do you have allergies?</label>
+          <select id="allergies" name="allergies">
+                <option value="none">No allergies</option>
+                <option value="mild">Mild allergies</option>
+                <option value="severe">Severe allergies</option>
+          </select>
+          <br><br>
+
+          <label for="personality">What personality do you prefer?</label>
+          <select id="personality" name="personality"> 
+                <option value="playful">Playful</option>
+                <option value="calm">Calm</option>
+                <option value="independent">Independent</option>
+            </select>
+            <br><br>
+
+            <label for="age">Preferred age of cat?</label>
+            <select id="age" name="age">
+                <option value="kitten">Kitten</option>
+                <option value="adult">Adult</option>
+                <option value="senior">Senior</option> 
+            </select>
+            <br><br>
+    
+          <button class="btn-secondary" type="button" popovertarget="resultDialog">Submit</button>
+     </form>
+    </dialog>
+
+    <dialog id="resultDialog" popover style="width: 500px;">
+        <h3 style="font-size: 24px; color: #333333; margin-bottom: 20px;">Thank you for submitting your form!</h3>
+        <p style="font-size: 16px; color: #555555; margin-bottom: 20px;">
+            Based on your answers, we will find the purrfect match for you! 
+            We will contact you via email within 3-5 business days with your results and next steps for adoption. 
+            In the meantime, feel free to browse our available cats and learn more about our adoption process.
+        </p>
+    </dialog>
+
+    <div class="container">
+        <div class="flex-container">
+            <div class="flex-item">
+                <h4 style="font-size: 28px; color: #333333; margin-bottom: 20px;">Why should you adopt?</h4>
+                <p style="font-size: 16px; color: #555555; margin-bottom: 20px;">Adopting a cat not only gives a loving home to a furry friend in need but also brings joy and 
+                    companionship into your life. Its a win-win situation! 
+                    By adopting, you are helping to reduce the number of homeless animals and supporting animal welfare organizations. 
+                    Plus, you'll have the satisfaction of knowing you've made a positive impact on an animal's life while gaining a loyal and loving companion.</p>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="flex-item">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cat Type</th>
+                            <th>Approximate Adoption Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kitten (0-12 months)</td>
+                            <td>$150</td>
+                        </tr>
+                        <tr>
+                            <td>Adult Cat (1-7 years)</td>
+                            <td>$100</td>
+                        </tr>
+                        <tr>
+                            <td>Senior Cat (8+ years)</td>
+                            <td>$50</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Note: Adoption fees are non-refundable and include spaying/neutering, vaccinations, and a health check-up.
+                    Price may vary based on special needs or disabilities. Please contact our shelter for more information on specific cats and their adoption fees.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-container" style="margin-top: 40px;">
+            <div class="card">
+                <img src="https://www.awanj.org/wp-content/uploads/2022/12/Little-Orphan-Annie.jpg" alt="Cat">
+                <div class="card-header">Meet Annie</div>
+                <div class="card-body">Annie is a sweet and playful 2-year-old tabby cat who loves cuddles and chasing toys. She's looking for a loving home where she can be the center of attention. 
+                    Annie gets along well with other cats and would do best in a home with lots of love and playtime!
+                    <div class="badge badge-success">Available</div>
+                </div>
+            </div>
+
+             <div class="card">
+                <img src="https://rspca-manchesterandsalford.org.uk/data/uploads/images/adoption/cat/kayacrop.jpg" alt="Cat">
+                <div class="card-header">Meet Tuxedo</div>
+                <div class="card-body">Tuxedo is a calm and affectionate 5-year-old tuxedo cat who enjoys lounging in sunny spots and being petted. He's looking for a quiet home where he can relax and receive lots of love. 
+                    Tuxedo gets along well with children and would do best in a home with a calm environment.
+                    <div class="badge badge-danger">Adopted</div>
+                </div>
+            </div>
+
+             <div class="card">
+                <img src="https://i.redd.it/injured-kitten-found-after-milton-v0-81km1rera8vd1.jpg?width=4032&format=pjpg&auto=webp&s=945925c9ec3b6b5acdbf4eaa367b6d9cf2cc7e3e" alt="Cat">
+                <div class="card-header">Meet Luna</div>
+                <div class="card-body">Luna is a playful and curious 1 month old kitten who loves exploring and playing with toys. She lost one of her legs in an accident but 
+                    that doesn't stop her from being full of energy and joy.
+                    Now that she's recovered, she's looking for an warm home where she can get lots of attention and playtime. 
+                    Luna gets along well with other cats and would do best in a home with lots of stimulation and interaction!
+                    <div class="badge badge-success">Available</div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <details>
+        <summary style="font-size: 20px; color: #333333;">Adoption Process Steps</summary>
+            <ol>
+                <li>Complete the adoption quiz to find your purrfect match.</li>
+                <li>Come in for an interview with our staff.</li>
+                <li>Allow our staff to do a home visit and background check.</li>
+                <li>Meet and greet your potential new companion.</li>
+                <li>Complete the adoption paperwork and pay fees.</li>
+                <li>Take home your new fluffy companion!</li>
+            </ol>
+        </details>
+
+    <details>
+        <summary style="font-size: 20px; color: #333333;">Can't adopt? Check out our volunteer program instead!</summary>
+        <p style="font-size: 16px; color: #000000; margin-bottom: 20px;">If you're unable to adopt, consider volunteering with us! 
+            Our volunteer program offers opportunities to help care for cats in our shelter, 
+            assist with adoption events, and support our mission of finding loving homes for all animals. 
+            Volunteers are essential to our success and make a real difference in the lives of cats in need.
+        </p>
+
+        <div class="card" style="width: 500px;">
+            <div class="card-header">Volunteer Opportunities:</div>
+            <div class="card-body">
+                <ul>
+                    <li>1. Cat Care: Help feed, groom, and play with our cats.</li>
+                    <li>2. Adoption Events: Assist with setting up and running adoption events.</li>
+                    <li>3. Fundraising: Support our fundraising efforts to provide care for our cats.</li>
+                    <li>4. Outreach: Help spread the word about our shelter and adoption opportunities.</li>
+                </ul>
+            </div>
+        </div>
+    </details>
+
+    <br><br>
+
+    <figure>
+        <img src="https://t4.ftcdn.net/jpg/02/67/91/81/360_F_267918100_vHI40jvQiCDpLHwM7pkoZRrYySUVYR4K.jpg" alt="Purrfect Match Logo">
+        <figcaption>About Purrfect Match. <br><br> Purrfect was created in 2020 to help find loving homes for cats in need. 
+            Since then, we've helped over 1,400 cats find their forever homes! <br><br> As many would know, we are a non-profit organization.
+            However, this has not stopped us from making a difference in the lives of cats and their new families.
+            Thanks to our regular donors and volunteers, we have been able to provide care, shelter, and love to countless cats 
+            while connecting them with their purrfect match! <br><br>
+            We will continue to work hard for the rest of our lives to help as many cats as we can find loving homes for. <br><br>
+            If you would like to support our mission, please consider donating or volunteering with us. 
+            Every little bit helps and makes a big difference in the lives of cats in need. <br><br>
+        </figcaption>
+    </figure>
+        
+    <br><br><br>
+
+    <footer>
+        © 2026 Purrfect Match. All rights reserved.
+    </footer>
+
 </body>
 </html>
